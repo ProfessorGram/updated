@@ -11,7 +11,7 @@ function updated_form_node_type_form_alter(&$form, $form_values) {
   $form['display']['node_updated'] = array(
     '#type' => 'checkbox',
     '#title' => t('Display last updated date.'),
-    '#default_value' => variable_get('node_updated_' . $form['#node_type']->type . '_display', TRUE),
+    '#default_value' => variable_get('updated_' . $form['#node_type']->type . '_display', TRUE),
     '#description' => t('Last updated date will be displayed along with published date.'),
   );
 }
@@ -20,7 +20,7 @@ function updated_form_node_type_form_alter(&$form, $form_values) {
  * Implements hook_form_BASE_FORM_alter().
  */
 function updated_form_node_form_alter(&$form, $form_values) {
-  if (variable_get('node_updated_' . $form['#node']->type . '_display', TRUE)) {
+  if (variable_get('updated_' . $form['#node']->type . '_display', TRUE)) {
     // Add the updated date so authors can see it here.
     if (property_exists($form['#node'], 'changed')) {
       $form['author']['updated_value'] = array(
