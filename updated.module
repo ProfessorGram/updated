@@ -22,17 +22,21 @@ function updated_form_node_type_form_alter(&$form, $form_values) {
 function updated_form_node_form_alter(&$form, $form_values) {
   if (variable_get('node_updated_' . $form['#node']->type . '_display', TRUE)) {
     // Add the updated date so authors can see it here.
-    $form['author']['updated_value'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Last updated'),
-      '#value' => format_date($form['#node']->changed),
-      '#disabled' => TRUE,
-    );
-    $form['options']['show_updated'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Display updated date'),
-      '#default_value' => $form['#node']->show_updated,
-    );
+    if (property_exists($form['#node'], 'changed')) {
+      $form['author']['updated_value'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Last updated'),
+        '#value' => format_date($form['#node']->changed),
+        '#disabled' => TRUE,
+      );
+    }
+    if (property_exists($form['#node'], 'show_updated')) {
+      $form['options']['show_updated'] = array(
+        '#type' => 'checkbox',
+        '#title' => t('Display updated date'),
+        '#default_value' => $form['#node']->show_updated,
+      );
+    }
   }
 }
 
