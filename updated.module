@@ -74,7 +74,7 @@ function updated_schema_alter(&$schema) {
  * Implements hook_preprocess_node().
  */
 function updated_preprocess_node(&$variables) {
-  if ($variables['node']->show_updated) {
+  if (variable_get('node_updated_' . $variables['node']->type, TRUE) && $variables['node']->show_updated) {
     $date = format_date($variables['node']->changed);
     $variables['submitted'] .= '&nbsp;&bull;&nbsp;<span>' . t('Updated on !date', array('!date' => $date)) . '</span>';
   }
