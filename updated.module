@@ -13,6 +13,11 @@ function updated_form_node_type_form_alter(&$form, $form_values) {
     '#title' => t('Display last updated date.'),
     '#default_value' => variable_get('node_updated_' . $form['#node_type']->type, TRUE),
     '#description' => t('Last updated date will be displayed along with published date.'),
+    '#states' => array(
+      'visible' => array(   // action to take.
+        ':input[name=node_submitted]' => array('checked' => TRUE),
+      ),
+    ),
   );
 }
 
