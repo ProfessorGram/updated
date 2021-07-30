@@ -26,6 +26,13 @@ class EntityTest extends BrowserTestBase {
   ];
 
   /**
+   * Specify the theme to be used in testing.
+   *
+   * @var string
+   */
+  protected $defaultTheme = 'stable9';
+
+  /**
    * {@inheritdoc}
    */
   protected function setUp(): void {
