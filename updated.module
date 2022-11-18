@@ -97,7 +97,7 @@ function updated_form_node_form_alter(&$form, FormStateInterface $form_state, $f
   // Update form element if user lacks permission to change the field value.
   if ($access_denied) {
     $form['display_updated']['widget']['#disabled'] = $access_denied;
-    $form['display_updated']['widget']['value']['#description'] = t(UpdatedHelper::PERMISSION_DENIED_MESSAGE);
+    $form['display_updated']['widget']['value']['#description'] = UpdatedHelper::PERMISSION_DENIED_MESSAGE;
   }
 }
 
@@ -132,7 +132,7 @@ function updated_form_node_type_form_alter(&$form, FormStateInterface $form_stat
   // Update form element if user lacks permission to change the field value.
   if ($access_denied) {
     $form['display_updated']['#disabled'] = $access_denied;
-    $form['display_updated']['#description'] = t(UpdatedHelper::PERMISSION_DENIED_MESSAGE);
+    $form['display_updated']['#description'] = UpdatedHelper::PERMISSION_DENIED_MESSAGE;
   }
 
   // Set new field definition default value for the Node Type on submit.
