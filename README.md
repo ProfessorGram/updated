@@ -26,14 +26,30 @@ INSTALLATION
 CONFIGURATION
 -------------
 
-1. Configure user permissions in Administration » People » Permissions (`admin/people/permissions`). The permission `Configure the display of the node last updated date` grants the ability to toggle the display of the last updated date on all node types; users with the additional `Administer content types` permission will be able to set the default display (on/off) per node type.
-2. Place the "Last Updated date block" block in the active theme layout at Administration » Structure  » Block layout (`/admin/structure/block`). Typically, this would be placed in the main content region, either preceding or following the "Main page content" block.
-3. Optionally set the default display for existing content types at Administration Structure Content types (`/admin/structure/types`). On the "Edit" tab for each content type, use the "Page Display Defaults" section to set whether new nodes should default to having the display of the last updated date toggled on or off (this is just the default, and can be toggled on or off on the individual node).
+1. Configure user permissions in Administration » People » Permissions
+   (`admin/people/permissions`). The permission
+   `Configure the display of the node last updated date` grants the ability
+   to toggle the display of the last updated date on all node types;
+   users with the additional `Administer content types` permission will be
+   able to set the default display (on/off) per node type.
+2. Place the "Last Updated date block" block in the active theme layout
+   at Administration » Structure  » Block layout (`/admin/structure/block`).
+   Typically, this would be placed in the main content region, either preceding
+   or following the "Main page content" block.
+3. Optionally set the default display for existing content types at
+   Administration Structure Content types (`/admin/structure/types`).
+   On the "Edit" tab for each content type, use the "Page Display Defaults"
+   section to set whether new nodes should default to having the display of
+   the last updated date toggled on or off (this is just the default, and can
+   be toggled on or off on the individual node).
 
 BEHAVIOR & DESIGN
 -----------------
 
-Note: the permission provided by this module to display the last updated date only regulates the block provided by this module. It does not affect other methods of displaying a node's last updated date (e.g., through Layout Builder).
+Note: the permission provided by this module to display the last updated
+date only regulates the block provided by this module. It does not affect
+other methods of displaying a node's last updated date
+(e.g., through Layout Builder).
 
 MAINTAINERS
 -----------
