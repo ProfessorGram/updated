@@ -2,11 +2,11 @@
 
 namespace Drupal\Tests\updated\Functional;
 
-use Drupal\Tests\node\Traits\ContentTypeCreationTrait;
-use Drupal\Tests\BrowserTestBase;
 use Drupal\Core\Field\Entity\BaseFieldOverride;
 use Drupal\Core\Url;
 use Drupal\node\Entity\NodeType;
+use Drupal\Tests\BrowserTestBase;
+use Drupal\Tests\node\Traits\ContentTypeCreationTrait;
 
 /**
  * Tests routes info pages and links.

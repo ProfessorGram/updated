@@ -8,6 +8,7 @@ use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Cache\Cache;
 use Drupal\Core\Datetime\DateFormatterInterface;
+use Drupal\Core\Datetime\TimeZoneFormHelper;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
@@ -65,7 +66,7 @@ class UpdatedDateBlock extends BlockBase implements ContainerFactoryPluginInterf
    * @param \Drupal\Component\Datetime\TimeInterface $time
    *   The time service.
    */
-  public function __construct(
+  final public function __construct(
     array $configuration,
     $plugin_id,
     $plugin_definition,
@@ -171,10 +172,11 @@ class UpdatedDateBlock extends BlockBase implements ContainerFactoryPluginInterf
       ':input[name="settings[updated_block][formatter_settings][date_format]"]' => ['value' => 'custom'],
     ];
 
+    $timezones = TimeZoneFormHelper::getOptionsListByRegion();
     $form['updated_block']['formatter_settings']['timezone'] = [
       '#type' => 'select',
       '#title' => $this->t('Time zone'),
-      '#options' => ['' => $this->t('- Default site/user time zone -')] + system_time_zones(FALSE, TRUE),
+      '#options' => ['' => $this->t('- Default site/user time zone -')] + $timezones,
       '#default_value' => $this->configuration['timezone'],
     ];
 
