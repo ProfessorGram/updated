@@ -2,8 +2,8 @@
 
 namespace Drupal\Tests\updated\FunctionalJavascript;
 
-use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 use Drupal\Core\Field\Entity\BaseFieldOverride;
+use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 use Drupal\node\Entity\NodeType;
 
 use Drupal\updated\UpdatedHelper;
@@ -30,7 +30,7 @@ class PermissionTest extends WebDriverTestBase {
    *
    * @var string
    */
-  protected $defaultTheme = 'stable9';
+  protected $defaultTheme = 'stark';
 
   /**
    * {@inheritdoc}
@@ -61,7 +61,7 @@ class PermissionTest extends WebDriverTestBase {
     $this->drupalLogin($account);
 
     // Place the block in the content area.
-    $block_url = 'admin/structure/block/add/updated_date_block/stable9';
+    $block_url = 'admin/structure/block/add/updated_date_block/stark';
     $edit = [
       'region' => 'content',
     ];
@@ -92,7 +92,7 @@ class PermissionTest extends WebDriverTestBase {
     // Confirm a new Test type node was created.
     $web_assert->responseContains('has been created.');
     // Verify the updated element exists in the markup.
-    $web_assert->elementNotExists('css', '#block-lastupdateddateblock');
+    $web_assert->elementNotExists('css', '#block-stark-lastupdateddateblock');
     // Grab the node id by its title and load the node edit page.
     $node = $this->drupalGetNodeByTitle($title);
 
@@ -100,7 +100,7 @@ class PermissionTest extends WebDriverTestBase {
     $page->findLink('Page display options')->click();
     $page->checkField('display_updated[value]');
     $this->submitForm([], 'Save');
-    $web_assert->elementExists('css', '#block-lastupdateddateblock');
+    $web_assert->elementExists('css', '#block-stark-lastupdateddateblock');
 
     // Logout.
     $this->drupalLogout();
