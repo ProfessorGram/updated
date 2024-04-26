@@ -137,7 +137,7 @@ class PermissionTest extends WebDriverTestBase {
     $page->findLink('Page display defaults')->click();
     $page->hasUnCheckedField('#edit-display-updated');
     $page->checkField('edit-display-updated');
-    $this->submitForm([], 'Save content type');
+    $this->submitForm([], 'Save');
     $this->drupalGet('node/add/test');
     $page->findLink('Page display options')->click();
     $page->hasCheckedField('#display_updated[value]');
