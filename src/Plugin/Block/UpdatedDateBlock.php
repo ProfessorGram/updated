@@ -72,7 +72,8 @@ class UpdatedDateBlock extends BlockBase implements ContainerFactoryPluginInterf
     $plugin_definition,
     DateFormatterInterface $date_formatter,
     EntityStorageInterface $date_format_storage,
-    TimeInterface $time) {
+    TimeInterface $time,
+  ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
 
     $this->dateFormatter = $date_formatter;
