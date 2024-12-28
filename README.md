@@ -35,7 +35,7 @@ or
 
 To view a list of all available Nodes.
 
-Click **Edit** on the target Node and verify that the checkbox labeled *Display updated date* in the *Publishing options* area of the node edit form to enable Last updated functionality for that individual Node.
+Click **Edit** on the target Node and verify that the checkbox labeled ***Display updated date*** in the ***Publishing options*** area of the node edit form is checked.  If it is, Last updated functionality is enabled for that individual Node.
 
 ## Issues
 Questions, Bug reports and Feature requests can all be added to the Issue Queue for this module, located at:
