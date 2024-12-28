@@ -3,7 +3,7 @@ https://github.com/ProfessorGram/updated-1.x-1.0.0/wiki
 
 
 ## Installation
-This module does not require a custom installation workflow.  Simply follow the official Backdrop CMS module installation workflow located at:  
+This module does not require a custom installation.  Follow the official Backdrop CMS module installation workflow located at:  
 https://backdropcms.org/guide/modules
 
 ## Administrative GUI Visibility
