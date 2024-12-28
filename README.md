@@ -22,7 +22,7 @@ or
 
 To view a list of all available Content types.
 
-Click **Configure** on the target Content type and verify that the checkbox labeled ***Display last updated date*** in the ***Display settings*** tab of the Content type edit form is checked.  If it is, Last updated functionality is enabled for any instance of that Content type.
+Click **Configure** on the target Content type and verify that the checkbox labeled ***Display last updated date*** in the ***Display settings*** tab of the Content type edit form is checked.  If it is, Last updated functionality is enabled for every instance of that Content type.
 
 ### By Individual Node
 To control the display of Last updated information for an individual node, visit:
