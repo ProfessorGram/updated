@@ -12,7 +12,7 @@ Post-installation, the day, date and time of the last node update always appears
 ## User GUI Visibility
 
 ### By *Content Type*
-To control the display of Last updated information for an entire Content Type, visit:
+To control the display of Last updated information for an entire Content type, visit:
 
 **Administration > Structure > Content types**
 
