@@ -1,4 +1,4 @@
-The Last updated (**updated**) module enables the display of information concerning when a node was last updated.  This information is always made available in the Administrative GUI, and can be optionally exposed within the User GUI via settings made present in the Administrative GUI.  Last updated functionality can be applied at the *Content type* level or at the individual Node level.  More comprehensive documentation regarding this module is available at:
+The Last updated (**updated**) module enables the display of information concerning when a node was last updated.  This information is always available in the Administrative GUI, and can be optionally made available in the User GUI via settings appearing in the Administrative GUI.  Last updated functionality can be applied at the *Content type* level or at the individual Node level.  More comprehensive documentation regarding this module is available at:
 https://github.com/ProfessorGram/updated-1.x-1.0.0/wiki
 
 
