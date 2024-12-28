@@ -20,9 +20,7 @@ or
 
 **admin/structure/types**
 
-To view a list of all available Content types.
-
-Click **Configure** on the target Content type and verify that the checkbox labeled ***Display last updated date*** in the ***Display settings*** tab of the Content type edit form is checked.  If it is, Last updated functionality is enabled for every instance of that Content type.
+To view a list of all available Content types. Next, click **Configure** on a target Content type and verify that the checkbox labeled ***Display last updated date*** in the ***Display settings*** tab of the Content type edit form is checked.  If it is, Last updated functionality is enabled for every instance of that Content type.
 
 ### By Individual Node
 To control the display of Last updated information for an individual node, visit:
@@ -33,9 +31,7 @@ or
 
 **admin/structure/types**
 
-To view a list of all available Nodes.
-
-Click **Edit** on the target Node and verify that the checkbox labeled ***Display updated date*** in the ***Publishing options*** area of the node edit form is checked.  If it is, Last updated functionality is enabled for that individual Node.
+To view a list of all available Nodes.  Next, click **Edit** on a target Node and verify that the checkbox labeled ***Display updated date*** in the ***Publishing options*** area of the node edit form is checked.  If it is, Last updated functionality is enabled for that individual Node.
 
 ## Issues
 Questions, Bug reports and Feature requests can all be added to the Issue Queue for this module, located at:
