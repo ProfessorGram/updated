@@ -10,12 +10,9 @@ https://backdropcms.org/guide/modules
 Post-installation, the day, date and time of the last node update always appears as a read-only field in the "Authoring information" section of the node edit form.
 
 ## User GUI Visibility
-Post-installation, whether or not text representing the day, date and time of the last node update appears in the User GUI is controlled via checkboxes located in the "Publishing options" section of the node edit form.  By way of this mechanism, it is possible to selectively expose node update information down to a node-by-node basis.
 
 ### By *Content Type*
-To control Last updated (updated) visibility for an entire *Content Type*:
-
-Visit:
+To control the display of Last updated information for an entire Content Type, visit:
 
 **Administration > Structure > Content types**
 
@@ -23,21 +20,18 @@ or
 
 **admin/structure/types**
 
-To see a list of all available Content types.  
-
-**Edit** the *Content type* that you wish to have Last updated functionality activated for, then check the checkbox labeled "" [find out] in the "" [find out] area of the *Content type* edit form.
+Click **Configure** on the target *Content type* and verify that the checkbox labeled ***Display last updated date*** in the ***Display settings*** tab of the Content type edit form is checked.  If it is, Last updated functionality is enabled for that Content type.
 
 ### By Individual Node
-To control Last updated (updated) visibility for an individual node:
-
-Visit:
+To control the display of Last updated information for an individual node, visit:
 
 **Administration > Structure > Content types** [this is wrong]
 
 **admin/structure/types** [this is wrong]
 
-**Edit** the node that you wish to have Last updated functionality activated for, then check the checkbox labeled "" [find out] in the *Publishing options* area of the node edit form.
+To view a list of all available Nodes.
 
+Click **Edit** on the target Node and verify that the checkbox labeled *Display updated date* in the *Publishing options* area of the node edit form to enable Last updated functionality for that individual Node.
 
 ## Issues
 Questions, Bug reports and Feature requests can all be added to the Issue Queue for this module, located at:
