@@ -1,4 +1,4 @@
-The Last updated (**updated**) module enables the monitoring of whenever a node was last updated.  This information is made available in the Administrative GUI, and can also be optionally exposed within the User GUI through checkboxes in the Administrative GUI.  The visibility of Last updated functionality can be controlled at the Content type level, or at the individual Node level.  More comprehensive documentation regarding this module (including possible use cases and implementation examples) is available at:
+The Last updated (**updated**) module enables the monitoring of whenever a node was last updated.  This information is made available in the Administrative GUI, and can also be optionally exposed within the User GUI via checkboxes in the Administrative GUI.  The visibility of Last updated functionality can be controlled at the Content type level, or at the individual Node level.  More comprehensive documentation regarding this module (including possible use cases and implementation examples) is available at:
 [https://github.com/backdrop-contrib/updated/wiki](https://github.com/ProfessorGram/updated-1.x-1.0.0/wiki)
 
 ## Installation
