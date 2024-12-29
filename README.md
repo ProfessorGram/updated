@@ -39,7 +39,7 @@ To view a list of all available Nodes.
 Click **Edit** on the target Node.  To activate Last updated functionality for that individual Node, verify that the checkbox labeled ***Display updated date*** in the ***Publishing options*** tab is checked.  If it is, Last updated information should appear in the display of that individual Node in the User GUI.
 
 ## Issues
-Questions, Bug reports and Feature requests can all be added to the Issue Queue for this module, which is located at:
+Questions, Bug reports and Feature requests can all be added to the Issue Queue for this module, located at:
 https://github.com/backdrop-contrib/updated/issues
 
 ## License
