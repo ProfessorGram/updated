@@ -12,7 +12,9 @@ The day, date and time of the last node update appears as a read-only field in t
 ## User GUI Visibility
 Post activation, the day, date and time of the last node update appears as an addendum to the node creation information appearing by default in the User GUI.
 
-### How To Expose Last Updated Information by *Content Type*
+### How To Expose Last Updated Information
+
+#### By Content Type
 To control the display of Last updated information for an entire Content type in the User GUI, visit:
 
 **Administration > Structure > Content types**
@@ -25,7 +27,7 @@ To view a list of all available Content types.
 
 Click **Configure** on the target Content type.  To activate Last updated functionality for the Content type, verify that the checkbox labeled ***Display last updated date*** in the ***Display settings*** tab is checked.  If it is, Last updated information should appear in the display of every instance of that Content type in the User GUI.
 
-### How To Expose Last Updated Information by Individual Node
+#### By Individual Node
 To control the display of Last updated information for an individual Node in the User GUI, visit:
 
 **Administration > Structure > Content types**
