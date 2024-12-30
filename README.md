@@ -35,7 +35,7 @@ Current Maintainers
 Credits
 -------
 - Originally Sponsored by [ChinaFile](http://chinafile.com/)
-- Originally written for Drupal by [Jeneration Web Development](http://www.jenerationweb.com/)
+- Originally written for Drupal by [Jeneration Web Development](http://www.jenerationweb.com/) / [Jennifer Lampton](https://github.com/jenlampton)
 - Ported to Backdrop CMS by [Professor Graham Leach](https://github.com/professorGram)
 
 
