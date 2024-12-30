@@ -14,11 +14,9 @@ getting started. More detailed documentation should be moved to a GitHub wiki
 page; for example: https://github.com/backdrop-contrib/setup/wiki/Documentation.
 -->
 
-The Last updated (updated) module enables the display of information regarding when a node was last updated.  Last updated information is always available in the Administrative GUI, and can also be made available in the User GUI. 
+The Last updated module enables the display of information regarding when a node was last updated.  Last updated information is always available in the Administrative GUI, and can also be made available in the User GUI. 
 
-Last updated functionality can be activated across an entire Content type.  It can also be selectively activated on a Node-by-Node basis. 
-
-Extensive documentation regarding how to install, activate, configure, administer and use this module is available at:
+Last updated functionality can be activated across an entire Content type, or selectively activated on per Node basis. Extensive documentation regarding how to install, activate, configure, administer and use this module is available at:
 https://github.com/backdrop-contrib/updated/wiki/Documentation.
 
 Requirements
