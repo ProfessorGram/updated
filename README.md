@@ -11,7 +11,7 @@ None.
 
 Installation
 ------------
-Install this module using the official Backdrop CMS instructions located at
+Install this module using the official Backdrop CMS instructions located at:
 https://docs.backdropcms.org/documentation/extend-with-modules
 
 Documentation
