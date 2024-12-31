@@ -5,13 +5,27 @@
  */
 
 /**
+* Implements hook_config_info().
+*/
+function updated_config_info() {
+  $prefixes['updated.settings'] = [
+  'label' => t('Updated settings'),
+  'group' => t('Configuration'),
+  ];
+  return $prefixes;
+}
+
+/**
  * Implements hook_form_BASE_FORM_alter().
  */
 function updated_form_node_type_form_alter(&$form, $form_values) {
+  $config = config('updated.settings');
+  $settings = $config->get('node_updated_node_types');
+  $check_state = $settings[$form['#node_type']->type] ?? TRUE;
   $form['display']['node_updated'] = array(
     '#type' => 'checkbox',
     '#title' => t('Display last updated date.'),
-    '#default_value' => variable_get('node_updated_' . $form['#node_type']->type, TRUE),
+    '#default_value' => $check_state,
     '#description' => t('Last updated date will be displayed along with published date.'),
     '#states' => array(
       'visible' => array(   // action to take.
@@ -19,13 +33,29 @@ function updated_form_node_type_form_alter(&$form, $form_values) {
       ),
     ),
   );
+
+  // Extends default submit method to involve configuration settings system
+  $form['#submit'][] = 'updated_form_node_type_form_submit';
+
+}
+
+/**
+ * Implements hook_form_BASE_FORM_submit().
+ */
+function updated_form_node_type_form_submit($form, &$form_state) {
+  $settings = config_get('updated.settings', 'node_updated_node_types');
+  $settings[$form['#node_type']->type] = (int) $form_state['values']['node_updated'];
+  config_set('updated.settings', 'node_updated_node_types', $settings, TRUE);
 }
 
 /**
  * Implements hook_form_BASE_FORM_alter().
  */
 function updated_form_node_form_alter(&$form, $form_values) {
-  if (variable_get('node_updated_' . $form['#node']->type, TRUE)) {
+  $config = config('updated.settings');
+  $settings = $config->get('node_updated_node_types');
+  $check_state = $settings[$form['#node']->type] ?? TRUE;
+  if ($check_state) {
     // Add the updated date so authors can see it here.
     if (property_exists($form['#node'], 'changed')) {
       $form['author']['updated_value'] = array(
@@ -56,7 +86,7 @@ function updated_node_validate($node, $form, &$form_state) {
 }
 
 /**
- * Implelements hook_schema_alter().
+ * Implements hook_schema_alter().
  */
 function updated_schema_alter(&$schema) {
   // Add show_updated field to existing node schema.
@@ -79,7 +109,10 @@ function updated_schema_alter(&$schema) {
  * Implements hook_preprocess_node().
  */
 function updated_preprocess_node(&$variables) {
-  if (variable_get('node_updated_' . $variables['node']->type, TRUE) && $variables['node']->show_updated) {
+  $config = config('updated.settings');
+  $settings = $config->get('node_updated_node_types');
+  $check_state = $settings[$variables['node']->type] ?? TRUE;
+  if ($check_state && $variables['node']->show_updated) {
     $date = format_date($variables['node']->changed);
     $variables['submitted'] .= '&nbsp;&bull;&nbsp;<span>' . t('Updated on !date', array('!date' => $date)) . '</span>';
   }

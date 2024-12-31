@@ -1,4 +1,4 @@
 type = module
 name = Last Updated
-description = Displays information regarding when a node was last updated.
+description = Displays the last updated information for a node.
 backdrop = 1.x
