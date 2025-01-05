@@ -11,33 +11,29 @@ None.
 
 Installation
 ------------
-Install this module using the official Backdrop CMS instructions located at:  
+Install this module using the official Backdrop CMS module installation instructions, which are located at:  
 https://docs.backdropcms.org/documentation/extend-with-modules
 
 Documentation
 -------------
-Additional documentation is in the Wiki located at:   
+Additional documentation for this module is available in its Wiki, which is located at:   
 https://github.com/backdrop-contrib/updated/wiki/Documentation
-
 
 Issues
 ------
-Bugs and Feature Requests should be reported in the Issue Queue:  
+Bugs and Feature Requests should be reported in this module's Issue Queue, which is located at:
 https://github.com/backdrop-contrib/updated/issues
-
 
 Current Maintainers
 -------------------
 - [Jennifer Lampton](https://github.com/jenlampton)
 - [Professor Graham Leach](https://github.com/professorGram)
 
-
 Credits
 -------
 - Originally Sponsored by [ChinaFile](http://chinafile.com/)
 - Originally written for Drupal by [Jeneration Web Development](http://www.jenerationweb.com/) ([Jennifer Lampton](https://github.com/jenlampton))
 - Ported to Backdrop CMS by [Professor Graham Leach](https://github.com/professorGram)
-
 
 License
 -------
