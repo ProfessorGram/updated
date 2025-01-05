@@ -1,4 +1,4 @@
-Last Upated (updated)
+Last Updated (updated)
 ========
 The Last updated module displays information about the last time a node was updated as an addendum to node creation information.  Post-activation, node update information is always available in the Administrative GUI, and can be made visible in the User GUI.
 
