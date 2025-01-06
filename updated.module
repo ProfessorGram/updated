@@ -53,7 +53,7 @@ function updated_form_node_type_form_submit($form, &$form_state) {
  */
 function updated_form_node_form_alter(&$form, $form_values) {
   $configuration = config('updated.settings');
-  $settings = $config->get('node_type_display_toggle');
+  $settings = $configuration->get('node_type_display_toggle');
   $checkbox_state = $settings[$form['#node']->type] ?? TRUE;
   if ($checkbox_state == TRUE) {
     // Add the updated date so authors can see it here.
@@ -110,7 +110,7 @@ function updated_schema_alter(&$schema) {
  */
 function updated_preprocess_node(&$variables) {
   $configuration = config('updated.settings');
-  $settings = $config->get('node_type_display_toggle');
+  $settings = $configuration->get('node_type_display_toggle');
   $checkbox_state = $settings[$variables['node']->type] ?? TRUE;
   if ($checkbox_state == TRUE && $variables['node']->show_updated) {
     $date = format_date($variables['node']->changed);
